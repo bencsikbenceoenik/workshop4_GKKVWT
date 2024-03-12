@@ -7,6 +7,37 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="0" x:Name="lb_athletes">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Label x:Name="label_athlete" Content="{Binding Name}" Background="{Binding Permit}" Foreground="Black"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox Grid.Column="1" x:Name="lb_selected">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Label x:Name="label_selected" Content="{Binding Name}" Background="{Binding Permit}" Foreground="Black"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel Grid.Column="2">
+            <Button x:Name="btn_load" Margin="5" Padding="5" Content="Load"/>
+            <Label Content="Versenyzők Összértéke:"/>
+            <Button x:Name="btn_add" Margin="5" Padding="5" Content="Add"/>
+            <Button x:Name="btn_remove" Margin="5" Padding="5" Content="Remove"/>
+            <Button x:Name="btn_details" Margin="5" Padding="5" Content="Details"/>
+            <Label x:Name="label_athletecount" Content="" Margin="5" Padding="5" ContentStringFormat="Versenyzők száma: {0}"/>
+            <Label x:Name="label_competationname" Content="" Margin="5" Padding="5" ContentStringFormat=""/>
+            <TextBox x:Name="tb_compname" Margin="5" Padding="5" />
+            <Label x:Name="label_compname" Content="" Margin="5" Padding="5" ContentStringFormat=""/>
+            <TextBox x:Name="tb_compname2" Margin="5" Padding="5"/>
+            <Button x:Name="btn_save" Margin="5" Padding="5" Content="Save"/>
+        </StackPanel>
     </Grid>
 </Window>
