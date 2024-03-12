@@ -34,7 +34,6 @@ namespace workshop4_GKKVWT.ViewModels
                 SetProperty(ref selectedFromAthletes, value);
                 if (selectedFromAthletes.Permit == true)
                 {
-                    ;
                     (AddToTeamCommand as RelayCommand).NotifyCanExecuteChanged();
                 }
                 
