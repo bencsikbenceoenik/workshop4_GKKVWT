@@ -9,8 +9,6 @@
 
   <ItemGroup>
     <Folder Include="Helpers\" />
-    <Folder Include="Logic\" />
-    <Folder Include="Services\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
 
