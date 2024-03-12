@@ -13,6 +13,8 @@ using System.Windows;
 using workshop4_GKKVWT.Logic;
 using workshop4_GKKVWT.Models;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace workshop4_GKKVWT.ViewModels
 {
@@ -79,7 +81,9 @@ namespace workshop4_GKKVWT.ViewModels
             Athletes = new ObservableCollection<Athlete>();
             Team = new ObservableCollection<Athlete>();
 
-            
+
+            string jsonstring = File.ReadAllText("athletes.json");
+            Athletes = JsonConvert.DeserializeObject<ObservableCollection<Athlete>>(jsonstring);
 
             logic.SetupCollections(Athletes, Team);
 
