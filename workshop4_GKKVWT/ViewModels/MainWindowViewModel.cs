@@ -81,9 +81,13 @@ namespace workshop4_GKKVWT.ViewModels
             Athletes = new ObservableCollection<Athlete>();
             Team = new ObservableCollection<Athlete>();
 
-
-            string jsonstring = File.ReadAllText("athletes.json");
-            Athletes = JsonConvert.DeserializeObject<ObservableCollection<Athlete>>(jsonstring);
+            Athletes = new ObservableCollection<Athlete>()
+            {
+                new Athlete(){Name="Bence",Pb= 10,ActualBest= 12,Permit=true,Team="ASD",Racetype="Run" },
+                new Athlete(){Name="Laci",Pb= 10,ActualBest= 12,Permit=false,Team="ASD",Racetype="Run" }
+            };
+            //string jsonstring = File.ReadAllText("athletes.json");
+            //Athletes = JsonConvert.DeserializeObject<ObservableCollection<Athlete>>(jsonstring);
 
             logic.SetupCollections(Athletes, Team);
 
