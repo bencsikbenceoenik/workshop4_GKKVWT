@@ -31,7 +31,7 @@
         <ListBox Grid.Column="1" x:Name="lb_team" ItemsSource="{Binding Team}" SelectedItem="{Binding SelectedFromTeam}" HorizontalContentAlignment="Stretch" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Label x:Name="label_team" Content="{Binding Name}" Background="{Binding Permit}" Foreground="Black"/>
+                    <Label x:Name="label_team" Content="{Binding Name}" Background="{Binding Permit , Converter={StaticResource colorconvert}}" Foreground="Black"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

@@ -24,8 +24,8 @@ namespace workshop4_GKKVWT.Logic
 
         public void SetupCollections(IList<Athlete> athletes, IList<Athlete> team)
         {
-            this.athletes = athletes;
-            this.team = team;
+            athletes = this.athletes;
+            team = this.team;
         }
 
         public int AllCost

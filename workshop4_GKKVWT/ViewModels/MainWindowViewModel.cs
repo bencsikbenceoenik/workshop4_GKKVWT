@@ -82,9 +82,11 @@ namespace workshop4_GKKVWT.ViewModels
         public MainWindowViewModel(IAthleteLogic logic)
         {
             this.logic = logic;
-            Athletes = new ObservableCollection<Athlete>();
-            Team = new ObservableCollection<Athlete>();
-
+            //Athletes = new ObservableCollection<Athlete>();
+            Team = new ObservableCollection<Athlete>()
+            {
+                new Athlete(){Name="Bence",Pb= 10,ActualBest= 12,Permit=true,Team="ASD",Racetype="Run" }
+            };
             Athletes = new ObservableCollection<Athlete>()
             {
                 new Athlete(){Name="Bence",Pb= 10,ActualBest= 12,Permit=true,Team="ASD",Racetype="Run" },

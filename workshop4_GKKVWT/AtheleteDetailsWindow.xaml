@@ -4,9 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:workshop4_GKKVWT"
+        xmlns:vms="clr-namespace:workshop4_GKKVWT.ViewModels"
         mc:Ignorable="d"
         Title="AtheleteDetailsWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel>
+        <Label Content="{Binding Actual.Name, UpdateSourceTrigger=Explicit}" ContentStringFormat="Name: {0}"/>
+        <Label Content="{Binding Actual.Pb, UpdateSourceTrigger=Explicit}" ContentStringFormat="Pb: {0}"/>
+        <Label Content="{Binding Actual.ActualBest, UpdateSourceTrigger=Explicit}" ContentStringFormat="ActualBest: {0}"/>
+        <Label Content="{Binding Actual.Permit, UpdateSourceTrigger=Explicit}" ContentStringFormat="Permit: {0}"/>
+        <Label Content="{Binding Actual.Team, UpdateSourceTrigger=Explicit}" ContentStringFormat="Team: {0}"/>
+        <Label Content="{Binding Actual.Racetype, UpdateSourceTrigger=Explicit}" ContentStringFormat="Racetype: {0}"/>
+        <Label Content="{Binding Actual.Worth, UpdateSourceTrigger=Explicit}" ContentStringFormat="Worth: {0}"/>
+    </StackPanel>
 </Window>
