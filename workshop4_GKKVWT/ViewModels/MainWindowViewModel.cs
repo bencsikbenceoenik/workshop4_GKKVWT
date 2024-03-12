@@ -105,8 +105,9 @@ namespace workshop4_GKKVWT.ViewModels
 
             RemoveFromTeamCommand = new RelayCommand(
                 () => logic.RemoveFromTeam(SelectedFromTeam),
-            () => SelectedFromTeam != null
-            );
+                () => SelectedFromTeam != null
+                );
+
             DetailsAthleteCommand = new RelayCommand(
                 () => logic.DetailsAthlete(SelectedFromAthletes),
                 () => SelectedFromAthletes != null
