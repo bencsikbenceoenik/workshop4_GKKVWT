@@ -9,17 +9,22 @@ using System.Windows.Media;
 
 namespace workshop4_GKKVWT.Helpers
 {
-    public class PermitToColorConverter : IValueConverter
+    internal class PermitToColorConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if((value is bool) == true)
-            {
-                return Brushes.Green;
-            }
-            else
+            bool l = bool.Parse(value.ToString());
+            if(l == false)
             {
                 return Brushes.Red;
+            }
+            //else if(l == true)
+            //{
+            //    return Brushes.HotPink;
+            //}
+            else
+            {
+                return Brushes.Green;
             }
         }
 
