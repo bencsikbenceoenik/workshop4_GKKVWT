@@ -34,6 +34,7 @@ namespace workshop4_GKKVWT.ViewModels
                 SetProperty(ref selectedFromAthletes, value);
                 if (selectedFromAthletes.Permit == true)
                 {
+                    ;
                     (AddToTeamCommand as RelayCommand).NotifyCanExecuteChanged();
                 }
                 
@@ -111,7 +112,7 @@ namespace workshop4_GKKVWT.ViewModels
                 () => SelectedFromAthletes != null
                 );
 
-            Messenger.Register<MainWindowViewModel, string, string>(this, "TrooperInfo", (recipient, msg) =>
+            Messenger.Register<MainWindowViewModel, string, string>(this, "AthleteInfo", (recipient, msg) =>
             {
                 OnPropertyChanged("AllCost");
             });

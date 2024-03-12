@@ -22,10 +22,10 @@ namespace workshop4_GKKVWT.Logic
             this.detailsService = detailsService;
         }
 
-        public void SetupCollections(IList<Athlete> athletes, IList<Athlete> team)
+        public void SetupCollections(IList<Athlete> Athletes, IList<Athlete> Team)
         {
-            athletes = this.athletes;
-            team = this.team;
+            athletes = Athletes;
+            team = Team;
         }
 
         public int AllCost
@@ -38,7 +38,7 @@ namespace workshop4_GKKVWT.Logic
 
         public void AddToTeam(Athlete athlete)
         {
-            team.Add(athlete);
+            team.Add(athlete.GetCopy());
             messenger.Send("Athlete added", "AthleteInfo");
         }
 
